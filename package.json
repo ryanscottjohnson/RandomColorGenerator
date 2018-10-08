@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ryanscottjohnson/RandomColorGenerator/issues"
   },
-  "homepage": "https://github.com/ryanscottjohnson/RandomColorGenerator#readme"
+  "homepage": "https://github.com/ryanscottjohnson/RandomColorGenerator#readme",
+  "dependencies": {
+    "react": "^16.5.2"
+  }
 }
