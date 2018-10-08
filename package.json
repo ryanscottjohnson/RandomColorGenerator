@@ -1,0 +1,23 @@
+{
+  "name": "randomcolorgenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanscottjohnson/RandomColorGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanscottjohnson/RandomColorGenerator/issues"
+  },
+  "homepage": "https://github.com/ryanscottjohnson/RandomColorGenerator#readme",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-native": "^0.57.2"
+  }
+}
