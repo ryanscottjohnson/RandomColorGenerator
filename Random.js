@@ -30,7 +30,7 @@ let Random = React.createClass({
   },
 
   chooseColor: function () {
-    for (let i =0; random = []; i< 3; i++) {
+    for (let i = 0; random = []; i < 3; i++) {
       random.push(Math.floor(Math.random() * 256));
     }
     return random;
