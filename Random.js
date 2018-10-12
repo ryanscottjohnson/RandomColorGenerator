@@ -29,6 +29,7 @@ let Random = React.createClass({
     document.body.style.background = color;
   },
 
+  // TODO: refactor function
   chooseColor: function () {
     for (let i = 0; random = []; i < 3; i++) {
       random.push(Math.floor(Math.random() * 256));
@@ -36,11 +37,12 @@ let Random = React.createClass({
     return random;
   },
 
+  // TODO: test render
   render: function () {
     return (
       <div>
         <h1 className={this.isLight() ? 'white' : 'black'}>
-          My color is {this.formatColor(this.state.color)}
+          Current Color {this.formatColor(this.state.color)}
         </h1>
         <Button light={this.isLight()} onClick={this.handleClick} />
       </div>
