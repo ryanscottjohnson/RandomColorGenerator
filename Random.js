@@ -1,8 +1,10 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+
 let Button = require('./Button');
 
 let Random = React.createClass({
+  
   getInitialState: function () {
     return { color: [3, 152, 199] }
   },
@@ -34,6 +36,7 @@ let Random = React.createClass({
     for (let i = 0; random = []; i < 3; i++) {
       random.push(Math.floor(Math.random() * 256));
     }
+
     return random;
   },
 
@@ -48,6 +51,7 @@ let Random = React.createClass({
       </div>
     );
   }
+
 });
 
 ReactDOM.render(
