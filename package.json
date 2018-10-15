@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ryanscottjohnson/RandomColorGenerator#readme",
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7"
   }
 }

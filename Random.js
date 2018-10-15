@@ -1,60 +1,72 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 
-let Button = require('./Button');
+import Button from './Button';
 
-let Random = React.createClass({
-  
-  getInitialState: function () {
+class Random extends React.Component {
+
+  getInitialState() {
     return { color: [3, 152, 199] }
-  },
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.applyColor();
-  },
+  };
 
-  formatColor: function (arr) {
+  formatColor() {
     return 'rgb(' + arr.join(', ') + ')';
-  },
+  };
 
-  handleClick: function () {
+  handleClick() {
     this.setState({ color: this.chooseColor() });
-  },
+  };
 
-  isLight: function () {
+  isLight() {
     let rgb = this.state.color;
     return rgb.reduce(function(a,b){ return a+b; }) < 127 *3;
-  },
+  };
 
-  applyColor: function () {
+  applyColor() {
     let color = this.formatColor(this.state.color);
     document.body.style.background = color;
-  },
+  };
 
   // TODO: refactor function
-  chooseColor: function () {
+  chooseColor() {
     for (let i = 0; random = []; i < 3; i++) {
       random.push(Math.floor(Math.random() * 256));
     }
 
     return random;
-  },
+  };
 
   // TODO: test render
-  render: function () {
-    return (
-      <div>
-        <h1 className={this.isLight() ? 'white' : 'black'}>
-          Current Color {this.formatColor(this.state.color)}
-        </h1>
-        <Button light={this.isLight()} onClick={this.handleClick} />
-      </div>
-    );
+  render() {
+    return <React.Fragement>
+        <div>
+          <h1 className={this.isLight() ? 'white' : 'black'}>
+            Current Color  is: {this.formatColor(this.state.color)}
+          </h1>
+          <Button light={this.isLight()} onClick={this.handleClick} />
+        </div>
+      </ React.Fragement>
   }
+}
 
-});
 
-ReactDOM.render(
-  <Random />,
-  document.getElementById('app')
-);
+// TODO: needs revision
+ReactDOM.render(<Random />, document.getElementById('app'));
+
+
+// from Nouri project for syntax refrence
+
+// class HomePage extends React.Component {
+//   render() {
+//     return <React.Fragment>
+//         <Header />
+//       </React.Fragment>
+//   }
+// }
+
+// export default HomePage;
