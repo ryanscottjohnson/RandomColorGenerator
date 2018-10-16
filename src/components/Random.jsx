@@ -43,7 +43,7 @@ class Random extends React.Component {
 
   // TODO: test render
   render() {
-    return <React.Fragement>
+    return (<React.Fragement>
         <div>
           <h1 className={this.isLight() ? 'white' : 'black'}>
             Current Color  is: {this.formatColor(this.state.color)}
@@ -51,12 +51,11 @@ class Random extends React.Component {
           <Button light={this.isLight()} onClick={this.handleClick} />
         </div>
       </ React.Fragement>
+    )
   }
 }
 
-
-// TODO: needs revision
-ReactDOM.render(<Random />, document.getElementById('app'));
+export default Random;
 
 
 // from Nouri project for syntax refrence
