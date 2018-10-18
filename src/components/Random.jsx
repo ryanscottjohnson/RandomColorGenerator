@@ -46,7 +46,7 @@ class Random extends React.Component {
     return (<React.Fragement>
         <div>
           <h1 className={this.isLight() ? 'white' : 'black'}>
-            Current Color  is: {this.formatColor(this.state.color)}
+            Current Color  {this.formatColor(this.state.color)}
           </h1>
           <Button light={this.isLight()} onClick={this.handleClick} />
         </div>
@@ -56,16 +56,3 @@ class Random extends React.Component {
 }
 
 export default Random;
-
-
-// from Nouri project for syntax refrence
-
-// class HomePage extends React.Component {
-//   render() {
-//     return <React.Fragment>
-//         <Header />
-//       </React.Fragment>
-//   }
-// }
-
-// export default HomePage;
