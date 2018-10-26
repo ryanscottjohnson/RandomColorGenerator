@@ -34,10 +34,9 @@ class Random extends React.Component {
 
   // TODO: refactor function
   chooseColor() {
-    for (let i = 0; random = []; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
       random.push(Math.floor(Math.random() * 256));
     }
-
     return random;
   };
 
