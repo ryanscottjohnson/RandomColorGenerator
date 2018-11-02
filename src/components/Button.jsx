@@ -4,7 +4,7 @@ class Button extends React.Componet{
   render() {
     return <React.Fragment>
       <button className={this.props.light ? 'light-button' : 'dark-button' } onClick={this.props.onClick}>
-        Click Me!
+        Presto Chango!
       </button>
     </React.Fragment>
   }
